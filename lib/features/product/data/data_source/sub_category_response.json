@@ -1,0 +1,20 @@
+{
+  "sub_categories" : [
+    {
+      "id" : 0,
+      "name" : "Shoes"
+    },
+    {
+      "id" : 1,
+      "name" : "Shirts"
+    },
+    {
+      "id" : 2,
+      "name" : "Pants"
+    },
+    {
+      "id" : 3,
+      "name" : "Hats"
+    }
+  ]
+}
