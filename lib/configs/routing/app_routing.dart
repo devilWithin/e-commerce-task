@@ -1,9 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:fudex_test/configs/routing/routes.dart';
 import 'package:fudex_test/core/utils/app_strings.dart';
+import 'package:fudex_test/features/product/presentation/screens/add_product_screen.dart';
+import 'package:fudex_test/features/product/presentation/screens/edit_product_screen.dart';
+import 'package:fudex_test/features/product/presentation/screens/products_list_screen.dart';
 
 class AppRouting {
   static Route? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
+      case Routes.productsScreen:
+        return _customPageRoute(
+          const ProductsListScreen(),
+        );
+      case Routes.addProductScreen:
+        return _customPageRoute(
+          const AddProductScreen(),
+        );
+      case Routes.editProductScreen:
+        return _customPageRoute(
+          const EditProductScreen(),
+        );
       default:
         return undefinedRoute();
     }

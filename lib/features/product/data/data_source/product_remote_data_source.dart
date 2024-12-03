@@ -8,6 +8,8 @@ abstract class ProductRemoteDataSource {
   Future<Unit> editProduct({required ProductModel product});
 
   Future<List<ProductModel>> getAllProducts();
+
+  Future<Unit> deleteProduct({required String productId});
 }
 
 class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
@@ -29,6 +31,12 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
   @override
   Future<List<ProductModel>> getAllProducts() async {
     // TODO: implement getAllProducts
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Unit> deleteProduct({required String productId}) {
+    // TODO: implement deleteProduct
     throw UnimplementedError();
   }
 }

@@ -1,1 +1,24 @@
-{}
+{
+"add" : "إضافة",
+"productImages" : "صور المنتج",
+"mainImage" : "الصورة الأساسية",
+"imageMustNotBeMoreThan" : "(لا يجب أن يتجاوز مساحة 2.5 MB)",
+"fieldIsRequired" : "هذا الحقل مطلوب",
+"productName" : "اسم المنتج",
+"mainCategory" : "القسم الرئيسي",
+"secondaryCategory" : "القسم الفرعي",
+"rsa" : "ريال سعودي",
+"productPrice" : "سعر المنتج",
+"addons" : "الإضافات",
+"specifyColor" : "تحديد اللون",
+"specifySize" : "تحديد المقاس",
+"productStatus" : "حالة المنتج",
+"newProduct" : "منتج جديد",
+"usedProduct" : "منتج مستعمل",
+"productsList" : "سجل المنتجات",
+"category" : "القسم",
+"activateProduct" : "تفعيل المنتج",
+"addProduct" : "إضافة منتج",
+"search" : "بحث",
+"editProduct" :"تعديل المنتج"
+}

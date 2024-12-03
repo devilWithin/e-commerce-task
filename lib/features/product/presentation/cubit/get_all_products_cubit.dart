@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fudex_test/core/api/base_usecase.dart';
 import 'package:fudex_test/core/utils/base_state.dart';
 import 'package:fudex_test/features/product/domain/entites/product.dart';
-import 'package:fudex_test/features/product/domain/use_cases/get_all_products.dart';
+import 'package:fudex_test/features/product/domain/use_cases/get_all_products_use_case.dart';
 
 class GetAllProductsCubit extends Cubit<BaseState<List<Product>>> {
   final GetAllProductsUseCase _useCase;

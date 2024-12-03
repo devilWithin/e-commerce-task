@@ -3,7 +3,7 @@ import 'package:fudex_test/features/product/data/repositories/product_repository
 import 'package:fudex_test/features/product/domain/repositories/product_repository.dart';
 import 'package:fudex_test/features/product/domain/use_cases/add_product_use_case.dart';
 import 'package:fudex_test/features/product/domain/use_cases/edit_product_use_case.dart';
-import 'package:fudex_test/features/product/domain/use_cases/get_all_products.dart';
+import 'package:fudex_test/features/product/domain/use_cases/get_all_products_use_case.dart';
 import 'package:fudex_test/features/product/presentation/cubit/add_product_cubit.dart';
 import 'package:fudex_test/features/product/presentation/cubit/edit_product_cubit.dart';
 import 'package:fudex_test/features/product/presentation/cubit/get_all_products_cubit.dart';

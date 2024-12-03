@@ -21,5 +21,31 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "activateProduct": MessageLookupByLibrary.simpleMessage("تفعيل المنتج"),
+        "add": MessageLookupByLibrary.simpleMessage("إضافة"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
+        "addons": MessageLookupByLibrary.simpleMessage("الإضافات"),
+        "category": MessageLookupByLibrary.simpleMessage("القسم"),
+        "editProduct": MessageLookupByLibrary.simpleMessage("تعديل المنتج"),
+        "fieldIsRequired":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
+        "imageMustNotBeMoreThan": MessageLookupByLibrary.simpleMessage(
+            "(لا يجب أن يتجاوز مساحة 2.5 MB)"),
+        "mainCategory": MessageLookupByLibrary.simpleMessage("القسم الرئيسي"),
+        "mainImage": MessageLookupByLibrary.simpleMessage("الصورة الأساسية"),
+        "newProduct": MessageLookupByLibrary.simpleMessage("منتج جديد"),
+        "productImages": MessageLookupByLibrary.simpleMessage("صور المنتج"),
+        "productName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "productPrice": MessageLookupByLibrary.simpleMessage("سعر المنتج"),
+        "productStatus": MessageLookupByLibrary.simpleMessage("حالة المنتج"),
+        "productsList": MessageLookupByLibrary.simpleMessage("سجل المنتجات"),
+        "rsa": MessageLookupByLibrary.simpleMessage("ريال سعودي"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "secondaryCategory":
+            MessageLookupByLibrary.simpleMessage("القسم الفرعي"),
+        "specifyColor": MessageLookupByLibrary.simpleMessage("تحديد اللون"),
+        "specifySize": MessageLookupByLibrary.simpleMessage("تحديد المقاس"),
+        "usedProduct": MessageLookupByLibrary.simpleMessage("منتج مستعمل")
+      };
 }

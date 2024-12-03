@@ -1,1 +1,24 @@
-{}
+{
+"add" : "Add",
+"productImages" : "Product Images",
+"mainImage" : "Main Image",
+"imageMustNotBeMoreThan" : "Image must not be more than 2.5 MB",
+"fieldIsRequired" : "This field is required",
+"productName" : "Product Name",
+"mainCategory" : "Main Category",
+"secondaryCategory" : "Secondary Category",
+"rsa" : "RSA",
+"productPrice" : "Product Price",
+"addons" : "Addons",
+"specifyColor" : "Specify Color",
+"specifySize" : "Specify Size",
+"productStatus" : "Product Status",
+"newProduct" : "New Product",
+"usedProduct" : "Used Product",
+"productsList" : "Products List",
+"category" : "Category",
+"activateProduct" : "Activate Product",
+"addProduct" : "Add Product",
+"search" : "Search",
+"editProduct" :"Edit Product"
+}
