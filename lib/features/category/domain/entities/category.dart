@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:fudex_test/features/product/data/models/category_model.dart';
+import 'package:fudex_test/features/category/data/models/category_model.dart';
 
 class Category extends Equatable {
   final int id;

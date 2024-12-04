@@ -1,7 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
-import 'package:fudex_test/features/product/data/models/addon_model.dart';
-import 'package:fudex_test/features/product/data/models/category_model.dart';
+import 'package:fudex_test/features/addon/data/models/addon_model.dart';
+import 'package:fudex_test/features/category/data/models/category_model.dart';
 import 'package:fudex_test/features/product/data/models/color_model.dart';
 import 'package:fudex_test/features/product/data/models/size_model.dart';
 import 'package:fudex_test/features/product/data/models/status_model.dart';

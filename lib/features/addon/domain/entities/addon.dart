@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:fudex_test/features/product/data/models/addon_model.dart';
+import 'package:fudex_test/features/addon/data/models/addon_model.dart';
 
 class Addon extends Equatable {
   final int id;

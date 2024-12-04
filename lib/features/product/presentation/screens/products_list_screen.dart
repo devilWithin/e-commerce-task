@@ -4,7 +4,7 @@ import 'package:fudex_test/core/utils/app_colors.dart';
 import 'package:fudex_test/core/widgets/custom_drop_down_menu.dart';
 import 'package:fudex_test/core/widgets/custom_elevated_button.dart';
 import 'package:fudex_test/core/widgets/scaffold_with_title.dart';
-import 'package:fudex_test/features/product/domain/entites/category.dart';
+import 'package:fudex_test/features/category/domain/entities/category.dart';
 import 'package:fudex_test/features/product/presentation/widgets/products_list.dart';
 import 'package:fudex_test/generated/l10n.dart';
 

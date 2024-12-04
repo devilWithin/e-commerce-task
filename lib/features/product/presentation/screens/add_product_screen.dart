@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fudex_test/core/utils/asset_manager.dart';
 import 'package:fudex_test/core/widgets/widgets.dart';
-import 'package:fudex_test/features/product/domain/entites/category.dart';
+import 'package:fudex_test/features/category/domain/entities/category.dart';
 import 'package:fudex_test/features/product/domain/entites/size.dart';
 import 'package:fudex_test/features/product/domain/entites/status.dart';
 import 'package:fudex_test/generated/l10n.dart';

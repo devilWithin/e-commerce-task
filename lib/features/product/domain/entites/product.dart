@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:fudex_test/features/product/data/models/product_model.dart';
-import 'package:fudex_test/features/product/domain/entites/addon.dart';
-import 'package:fudex_test/features/product/domain/entites/category.dart';
+import 'package:fudex_test/features/addon/domain/entities/addon.dart';
+import 'package:fudex_test/features/category/domain/entities/category.dart';
 import 'package:fudex_test/features/product/domain/entites/color_entity.dart';
 import 'package:fudex_test/features/product/domain/entites/size.dart';
 import 'package:fudex_test/features/product/domain/entites/status.dart';
