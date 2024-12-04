@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fudex_test/configs/theme/styles_manager.dart';
 import 'package:fudex_test/core/utils/app_colors.dart';
 
 ThemeData getLightThemeData(BuildContext context) => ThemeData(
@@ -17,18 +18,18 @@ ThemeData getLightThemeData(BuildContext context) => ThemeData(
           borderRadius: BorderRadius.circular(3),
         ),
         padding: EdgeInsets.zero,
-        labelStyle: Theme.of(context).textTheme.labelSmall!.copyWith(
-              color: AppColors.badgeTextColor,
-            ),
+        labelStyle: context.labelSmall.copyWith(
+          color: AppColors.badgeTextColor,
+        ),
       ),
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
         elevation: 5,
         shadowColor: Colors.black.withOpacity(0.1),
         centerTitle: true,
-        titleTextStyle: Theme.of(context).textTheme.titleSmall!.copyWith(
-              fontFamily: 'Cairo',
-            ),
+        titleTextStyle: context.titleSmall.copyWith(
+          fontFamily: 'Cairo',
+        ),
       ),
       textTheme: const TextTheme(
         titleSmall: TextStyle(

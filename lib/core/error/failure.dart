@@ -24,3 +24,18 @@ class ServerFailure extends Failure {
         : ServerFailure(message: messageEn);
   }
 }
+
+class CacheFailure extends Failure {
+  const CacheFailure({
+    required super.message,
+  });
+
+  factory CacheFailure.localized({
+    required String messageAr,
+    required String messageEn,
+  }) {
+    return Intl.getCurrentLocale() == 'ar'
+        ? CacheFailure(message: messageAr)
+        : CacheFailure(message: messageEn);
+  }
+}

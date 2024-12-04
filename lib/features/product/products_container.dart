@@ -37,8 +37,8 @@ void setupProductContainer() {
       () => GetAllProductsUseCase(repository: sl()));
 
   //repository
-  sl.registerLazySingleton<ProductRepository>(
-      () => ProductRepositoryImpl(remoteDataSource: sl()));
+  sl.registerLazySingleton<ProductRepository>(() =>
+      ProductRepositoryImpl(remoteDataSource: sl(), localDataSource: sl()));
 
   //data sources
   sl.registerLazySingleton<ProductRemoteDataSource>(

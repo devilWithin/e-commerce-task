@@ -13,6 +13,17 @@ class SizeModel extends Equatable {
 
   const SizeModel({required this.id, required this.name});
 
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+    };
+  }
+
+  factory SizeModel.fromJson(Map<String, dynamic> json) => SizeModel(
+        id: json['id'] as int,
+        name: json['name'] as String,
+      );
+
   @override
   List<Object?> get props => [id, name];
 }

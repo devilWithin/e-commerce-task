@@ -15,10 +15,10 @@ class Product extends Equatable {
   final Category mainCategory;
   final Category secondaryCategory;
   final String price;
-  final List<Addon> addons;
-  final List<ColorEntity> availableColors;
-  final List<SizeEntity> sizes;
-  final List<Status> status;
+  final List<Addon>? addons;
+  final List<ColorEntity>? availableColors;
+  final List<SizeEntity>? sizes;
+  final List<Status>? status;
   final List<String> keywords;
 
   const Product({
@@ -55,20 +55,21 @@ class Product extends Equatable {
 
 extension ProductExtension on Product {
   ProductModel toData() => ProductModel(
-      name: name,
-      description: description,
-      mainImage: mainImage,
-      secondaryImages: secondaryImages,
-      mainCategory: mainCategory.toData(),
-      secondaryCategory: secondaryCategory.toData(),
-      price: price,
-      addons: addons
-          .map(
-            (e) => e.toData(),
-          )
-          .toList(),
-      availableColors: availableColors.map((e) => e.toData()).toList(),
-      sizes: sizes.map((e) => e.toData()).toList(),
-      status: status.map((e) => e.toData()).toList(),
-      keywords: keywords);
+        name: name,
+        description: description,
+        mainImage: mainImage,
+        secondaryImages: secondaryImages,
+        mainCategory: mainCategory.toData(),
+        secondaryCategory: secondaryCategory.toData(),
+        price: price,
+        addons: addons
+            ?.map(
+              (e) => e.toData(),
+            )
+            .toList(),
+        availableColors: availableColors?.map((e) => e.toData()).toList(),
+        sizes: sizes?.map((e) => e.toData()).toList(),
+        status: status?.map((e) => e.toData()).toList(),
+        keywords: keywords,
+      );
 }

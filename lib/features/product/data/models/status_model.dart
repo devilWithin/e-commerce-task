@@ -13,6 +13,17 @@ class StatusModel extends Equatable {
 
   const StatusModel({required this.id, required this.name});
 
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+    };
+  }
+
+  factory StatusModel.fromJson(Map<String, dynamic> json) => StatusModel(
+        id: json['id'] as int,
+        name: json['name'] as String,
+      );
+
   @override
   List<Object?> get props => [id, name];
 }

@@ -11,6 +11,16 @@ class ColorModel extends Equatable {
 
   const ColorModel({required this.id, required this.hex});
 
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'hex': hex,
+      };
+
+  factory ColorModel.fromJson(Map<String, dynamic> json) => ColorModel(
+        id: json['id'] as int,
+        hex: json['hex'] as int,
+      );
+
   @override
   List<Object?> get props => [id, hex];
 }

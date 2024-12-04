@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:fudex_test/core/api/api_consumer.dart';
+import 'package:fudex_test/core/error/exception.dart';
 import 'package:fudex_test/features/product/data/models/product_model.dart';
 
 abstract class ProductRemoteDataSource {
@@ -20,7 +21,21 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
 
   @override
   Future<Unit> addProduct({required ProductModel newProduct}) async {
-    return unit;
+    try {
+      final ApiResponse response = await _apiConsumer.post(
+        '/products',
+        body: newProduct.toJson(),
+      );
+      if (response.statusCode != 200) {
+        throw ServerException.localized(
+          messageAr: 'Some arabic message',
+          messageEn: 'Some English Message',
+        );
+      }
+      return unit;
+    } catch (e) {
+      rethrow;
+    }
   }
 
   @override
@@ -30,11 +45,37 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
 
   @override
   Future<List<ProductModel>> getAllProducts() async {
-    return [];
+    try {
+      final ApiResponse response = await _apiConsumer.get('/products');
+      if (response.statusCode != 200) {
+        throw ServerException.localized(
+          messageAr: 'Some arabic message',
+          messageEn: 'Some English Message',
+        );
+      }
+      final products = List<ProductModel>.from(
+        response.data.map((product) => ProductModel.fromJson(product)),
+      );
+      return products;
+    } catch (e) {
+      rethrow;
+    }
   }
 
   @override
   Future<Unit> deleteProduct({required String productId}) async {
-    return unit;
+    try {
+      final ApiResponse response =
+          await _apiConsumer.delete('/products/$productId');
+      if (response.statusCode != 200) {
+        throw ServerException.localized(
+          messageAr: 'Some arabic message',
+          messageEn: 'Some English Message',
+        );
+      }
+      return unit;
+    } catch (e) {
+      rethrow;
+    }
   }
 }

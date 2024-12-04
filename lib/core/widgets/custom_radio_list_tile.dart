@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fudex_test/configs/theme/styles_manager.dart';
 
 class CustomRadioListTile<T> extends StatelessWidget {
   final T? groupValue;
@@ -35,7 +36,7 @@ class CustomRadioListTile<T> extends StatelessWidget {
           : null,
       title: Text(
         title,
-        style: Theme.of(context).textTheme.bodyMedium,
+        style: context.bodyMedium,
       ),
       onChanged: (T? value) {
         onChanged(value);

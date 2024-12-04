@@ -2,6 +2,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fudex_test/configs/theme/styles_manager.dart';
 import 'package:fudex_test/core/utils/app_colors.dart';
 import 'package:fudex_test/core/widgets/widgets.dart';
 import 'package:fudex_test/generated/l10n.dart';
@@ -96,10 +97,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 ),
               ),
               labelText: widget.label,
-              labelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: Colors.grey[700],
-                    fontWeight: FontWeight.w500,
-                  ),
+              labelStyle: context.bodyMedium.copyWith(
+                color: Colors.grey[700],
+                fontWeight: FontWeight.w500,
+              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
                 borderSide: const BorderSide(width: 0.2),

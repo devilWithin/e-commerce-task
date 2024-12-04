@@ -16,8 +16,15 @@ class CategoryModel extends Equatable {
 
   const CategoryModel({required this.id, required this.name, this.addons});
 
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'addons': addons?.map((e) => e.toJson()).toList(),
+    };
+  }
+
   factory CategoryModel.fromJson(Map<String, dynamic> json) {
-    print(json.toString());
     return CategoryModel(
       id: json['id'] as int,
       name: json['name'] as String,

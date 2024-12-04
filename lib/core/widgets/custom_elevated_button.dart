@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fudex_test/configs/theme/styles_manager.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final double width;
@@ -30,7 +31,7 @@ class CustomElevatedButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         title,
-        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+        style: context.bodyMedium.copyWith(
             fontWeight: FontWeight.bold, color: textColor ?? Colors.white),
       ),
     );

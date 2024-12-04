@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fudex_test/configs/theme/styles_manager.dart';
 import 'package:fudex_test/core/utils/asset_manager.dart';
 import 'package:fudex_test/features/product/domain/entites/product.dart';
 import 'package:fudex_test/generated/l10n.dart';
@@ -29,7 +30,7 @@ class _ProductItemState extends State<ProductItem> {
               children: [
                 Text(
                   S.of(context).activateProduct,
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: context.bodySmall,
                 ),
                 const Spacer(),
                 Row(
@@ -79,17 +80,17 @@ class _ProductItemState extends State<ProductItem> {
                 children: [
                   Text(
                     "شنطة حريمى هاند ميد خوص",
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          fontWeight: FontWeight.w400,
-                          height: 1.5,
-                        ),
+                    style: context.bodyLarge.copyWith(
+                      fontWeight: FontWeight.w400,
+                      height: 1.5,
+                    ),
                   ),
                   Text(
                     "300 رس",
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.w700,
-                        ),
+                    style: context.bodyMedium.copyWith(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                   Row(
                     children: List.generate(4, (index) {

@@ -17,6 +17,8 @@ So i used clean architecture in order to maintain the project easily and to make
 
 ### Theme:
 - Used to customize the theme of the project.
+- There is a file which is styles_manager.dart that contains all the styles of the project
+- with extensions based on BuildContext.
 
 ## Core folder:
 - This folder contains all the core files that are used in the project.
@@ -40,6 +42,12 @@ So i used clean architecture in order to maintain the project easily and to make
 - Status Code class used in Dio Consumer.
 - Dio Consumer is a implementation class of Api Consumer.
 - Base UseCase is a base class for use cases in order not to write boilerplate code in each use case.
+
+### local_db:
+- Used to handle all the local database that are used in the project.
+- Currently using Hive for storing data locally and it's used in getProducts in products_repository_impl.dart.
+- Hive is lightweight and fast key-value database that is used in the project.
+- Used this approach to demonstrate SSOT (Single Source of Truth) in the project.
 
 ### Widgets:
 - Used to handle all the widgets that are used in the project like custom text field, custom button.

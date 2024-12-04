@@ -16,6 +16,12 @@ class AddonModel extends Equatable {
   const AddonModel(
       {required this.id, required this.nameAr, required this.nameEn});
 
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+    };
+  }
+
   factory AddonModel.fromJson(Map<String, dynamic> json) => AddonModel(
         id: json['id'] as int,
         nameAr: json['name_ar'] as String,

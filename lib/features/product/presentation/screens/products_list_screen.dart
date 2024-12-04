@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fudex_test/configs/routing/routes.dart';
+import 'package:fudex_test/configs/theme/styles_manager.dart';
 import 'package:fudex_test/core/utils/app_colors.dart';
 import 'package:fudex_test/core/widgets/custom_drop_down_menu.dart';
 import 'package:fudex_test/core/widgets/custom_elevated_button.dart';
@@ -45,10 +46,10 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
             onTapOutside: (value) => _searchFocusNode.unfocus(),
             decoration: InputDecoration(
               hintText: S.of(context).search,
-              hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                    color: AppColors.hintColor,
-                    fontWeight: FontWeight.w400,
-                  ),
+              hintStyle: context.bodyLarge.copyWith(
+                color: AppColors.hintColor,
+                fontWeight: FontWeight.w400,
+              ),
               constraints: const BoxConstraints(maxHeight: 36),
               prefixIcon: const Icon(Icons.search, size: 25),
               suffixIcon: IconButton(

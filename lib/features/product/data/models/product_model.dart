@@ -26,13 +26,13 @@ class ProductModel extends Equatable {
   @HiveField(6)
   final String price;
   @HiveField(7)
-  final List<AddonModel> addons;
+  final List<AddonModel>? addons;
   @HiveField(8)
-  final List<ColorModel> availableColors;
+  final List<ColorModel>? availableColors;
   @HiveField(9)
-  final List<SizeModel> sizes;
+  final List<SizeModel>? sizes;
   @HiveField(10)
-  final List<StatusModel> status;
+  final List<StatusModel>? status;
   @HiveField(11)
   final List<String> keywords;
 
@@ -50,6 +50,59 @@ class ProductModel extends Equatable {
     required this.status,
     required this.keywords,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'name': name,
+      'description': description,
+      'mainImage': mainImage,
+      'secondaryImages': secondaryImages,
+      'mainCategory': mainCategory.toJson(),
+      'secondaryCategory': secondaryCategory.toJson(),
+      'price': price,
+      'addons': addons?.map((e) => e.toJson()).toList(),
+      'availableColors': availableColors?.map((e) => e.toJson()).toList(),
+      'sizes': sizes?.map((e) => e.toJson()).toList(),
+      'status': status?.map((e) => e.toJson()).toList(),
+      'keywords': keywords,
+    };
+  }
+
+  factory ProductModel.fromJson(Map<String, dynamic> json) {
+    return ProductModel(
+      name: json['name'] as String,
+      description: json['description'] as String,
+      mainImage: json['mainImage'] as String,
+      secondaryImages:
+          (json['secondaryImages'] as List).map((e) => e as String).toList(),
+      mainCategory:
+          CategoryModel.fromJson(json['mainCategory'] as Map<String, dynamic>),
+      secondaryCategory: CategoryModel.fromJson(
+          json['secondaryCategory'] as Map<String, dynamic>),
+      price: json['price'] as String,
+      addons: json['addons'] != null
+          ? (json['addons'] as List)
+              .map((e) => AddonModel.fromJson(e as Map<String, dynamic>))
+              .toList()
+          : null,
+      availableColors: json['availableColors'] != null
+          ? (json['availableColors'] as List)
+              .map((e) => ColorModel.fromJson(e as Map<String, dynamic>))
+              .toList()
+          : null,
+      sizes: json['sizes'] != null
+          ? (json['sizes'] as List)
+              .map((e) => SizeModel.fromJson(e as Map<String, dynamic>))
+              .toList()
+          : null,
+      status: json['status'] != null
+          ? (json['status'] as List)
+              .map((e) => StatusModel.fromJson(e as Map<String, dynamic>))
+              .toList()
+          : null,
+      keywords: (json['keywords'] as List).map((e) => e as String).toList(),
+    );
+  }
 
   @override
   List<Object?> get props => [
@@ -77,10 +130,10 @@ extension ProductModelX on ProductModel {
         mainCategory: mainCategory.toDomain(),
         secondaryCategory: secondaryCategory.toDomain(),
         price: price,
-        addons: addons.map((e) => e.toDomain()).toList(),
-        availableColors: availableColors.map((e) => e.toDomain()).toList(),
-        sizes: sizes.map((e) => e.toDomain()).toList(),
-        status: status.map((e) => e.toDomain()).toList(),
+        addons: addons?.map((e) => e.toDomain()).toList(),
+        availableColors: availableColors?.map((e) => e.toDomain()).toList(),
+        sizes: sizes?.map((e) => e.toDomain()).toList(),
+        status: status?.map((e) => e.toDomain()).toList(),
         keywords: keywords,
       );
 }
