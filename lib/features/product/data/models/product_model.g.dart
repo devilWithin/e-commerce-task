@@ -27,7 +27,7 @@ class ProductModelAdapter extends TypeAdapter<ProductModel> {
       addons: (fields[7] as List).cast<AddonModel>(),
       availableColors: (fields[8] as List).cast<ColorModel>(),
       sizes: (fields[9] as List).cast<SizeModel>(),
-      status: fields[10] as StatusModel,
+      status: (fields[10] as List).cast<StatusModel>(),
       keywords: (fields[11] as List).cast<String>(),
     );
   }

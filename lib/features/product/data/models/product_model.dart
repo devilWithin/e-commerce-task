@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:fudex_test/features/addon/data/models/addon_model.dart';
+import 'package:fudex_test/features/category/data/models/addon_model.dart';
 import 'package:fudex_test/features/category/data/models/category_model.dart';
 import 'package:fudex_test/features/product/data/models/color_model.dart';
 import 'package:fudex_test/features/product/data/models/size_model.dart';
@@ -32,7 +32,7 @@ class ProductModel extends Equatable {
   @HiveField(9)
   final List<SizeModel> sizes;
   @HiveField(10)
-  final StatusModel status;
+  final List<StatusModel> status;
   @HiveField(11)
   final List<String> keywords;
 
@@ -80,7 +80,7 @@ extension ProductModelX on ProductModel {
         addons: addons.map((e) => e.toDomain()).toList(),
         availableColors: availableColors.map((e) => e.toDomain()).toList(),
         sizes: sizes.map((e) => e.toDomain()).toList(),
-        status: status.toDomain(),
+        status: status.map((e) => e.toDomain()).toList(),
         keywords: keywords,
       );
 }

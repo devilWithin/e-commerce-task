@@ -27,14 +27,29 @@ class _ProductsListState extends State<ProductsList> {
     return Expanded(
       child: BlocBuilder<GetAllProductsCubit, BaseState<List<Product>>>(
         bloc: _getAllProductsCubit,
-        builder: (context, state) => ListView.separated(
-          physics: const BouncingScrollPhysics(),
-          itemBuilder: (context, index) => ProductItem(
-            product: state.item![index],
-          ),
-          separatorBuilder: (context, index) => const SizedBox(height: 8),
-          itemCount: state.item!.length,
-        ),
+        builder: (context, state) {
+          if (state.isSuccess) {
+            if (state.item == null || state.item!.isEmpty) {
+              return const Center(
+                child: Text('No products found'),
+              );
+            }
+            return ListView.separated(
+              physics: const BouncingScrollPhysics(),
+              itemBuilder: (context, index) => ProductItem(
+                product: state.item![index],
+              ),
+              separatorBuilder: (context, index) => const SizedBox(height: 8),
+              itemCount: state.item!.length,
+            );
+          }
+          if (state.isFailure) {
+            return const Center(
+              child: Text('Failed to load products'),
+            );
+          }
+          return const Center(child: CircularProgressIndicator.adaptive());
+        },
       ),
     );
   }

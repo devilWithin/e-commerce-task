@@ -30,13 +30,11 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
 
   @override
   Future<List<ProductModel>> getAllProducts() async {
-    // TODO: implement getAllProducts
-    throw UnimplementedError();
+    return [];
   }
 
   @override
-  Future<Unit> deleteProduct({required String productId}) {
-    // TODO: implement deleteProduct
-    throw UnimplementedError();
+  Future<Unit> deleteProduct({required String productId}) async {
+    return unit;
   }
 }

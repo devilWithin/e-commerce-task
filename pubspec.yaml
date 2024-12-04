@@ -77,6 +77,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - lib/features/category/data/data_source/category_response.json
+    - lib/features/category/data/data_source/sub_category_response.json
+    - lib/features/keyword/data/data_source/keywords_response.json
   fonts:
     - family: Cairo
       fonts:

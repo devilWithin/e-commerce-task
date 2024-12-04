@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "productPrice": MessageLookupByLibrary.simpleMessage("Product Price"),
         "productStatus": MessageLookupByLibrary.simpleMessage("Product Status"),
         "productsList": MessageLookupByLibrary.simpleMessage("Products List"),
+        "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "rsa": MessageLookupByLibrary.simpleMessage("RSA"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "secondaryCategory":

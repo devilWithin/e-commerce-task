@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:fudex_test/features/product/data/models/product_model.dart';
-import 'package:fudex_test/features/addon/domain/entities/addon.dart';
+import 'package:fudex_test/features/category/domain/entities/addon.dart';
 import 'package:fudex_test/features/category/domain/entities/category.dart';
 import 'package:fudex_test/features/product/domain/entites/color_entity.dart';
 import 'package:fudex_test/features/product/domain/entites/size.dart';
@@ -18,7 +18,7 @@ class Product extends Equatable {
   final List<Addon> addons;
   final List<ColorEntity> availableColors;
   final List<SizeEntity> sizes;
-  final Status status;
+  final List<Status> status;
   final List<String> keywords;
 
   const Product({
@@ -69,6 +69,6 @@ extension ProductExtension on Product {
           .toList(),
       availableColors: availableColors.map((e) => e.toData()).toList(),
       sizes: sizes.map((e) => e.toData()).toList(),
-      status: status.toData(),
+      status: status.map((e) => e.toData()).toList(),
       keywords: keywords);
 }

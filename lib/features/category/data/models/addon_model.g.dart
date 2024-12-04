@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'addon_model.dart';
+part of '../../../category/data/models/addon_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
@@ -18,18 +18,21 @@ class AddonModelAdapter extends TypeAdapter<AddonModel> {
     };
     return AddonModel(
       id: fields[0] as int,
-      name: fields[1] as String,
+      nameAr: fields[1] as String,
+      nameEn: fields[2] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, AddonModel obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.name);
+      ..write(obj.nameAr)
+      ..writeByte(2)
+      ..write(obj.nameEn);
   }
 
   @override

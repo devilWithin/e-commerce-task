@@ -20,5 +20,6 @@
 "activateProduct" : "Activate Product",
 "addProduct" : "Add Product",
 "search" : "Search",
-"editProduct" :"Edit Product"
+"editProduct" :"Edit Product",
+"retry" : "Retry"
 }

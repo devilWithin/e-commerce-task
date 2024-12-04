@@ -20,5 +20,6 @@
 "activateProduct" : "تفعيل المنتج",
 "addProduct" : "إضافة منتج",
 "search" : "بحث",
-"editProduct" :"تعديل المنتج"
+"editProduct" :"تعديل المنتج",
+"retry" : "إعادة المحاولة"
 }

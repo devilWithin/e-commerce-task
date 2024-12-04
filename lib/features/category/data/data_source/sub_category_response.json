@@ -2,19 +2,82 @@
   "sub_categories" : [
     {
       "id" : 0,
-      "name" : "Shoes"
+      "name" : "Shoes",
+      "addons" : [
+        {
+          "id" : 0,
+          "name_en" : "Color",
+          "name_ar" : "لون"
+        },
+        {
+          "id" : 1,
+          "name_en" : "Size",
+          "name_ar" : "حجم"
+        },
+        {
+          "id" : 2,
+          "name_en" : "Status",
+          "name_ar" : "حالة"
+        }
+      ]
     },
     {
       "id" : 1,
-      "name" : "Shirts"
+      "name" : "Shirts",
+      "addons" : [
+        {
+          "id" : 0,
+          "name_en" : "Color",
+          "name_ar" : "لون"
+        },
+        {
+          "id" : 1,
+          "name_en" : "Size",
+          "name_ar" : "مقاس"
+        },
+        {
+          "id" : 2,
+          "name_en" : "Status",
+          "name_ar" : "حالة"
+        }
+      ]
     },
     {
       "id" : 2,
-      "name" : "Pants"
+      "name" : "Pants",
+      "addons" : [
+        {
+          "id" : 0,
+          "name_en" : "Color",
+          "name_ar" : "لون"
+        },
+        {
+          "id" : 1,
+          "name_en" : "Size",
+          "name_ar" : "مقاس"
+        },
+        {
+          "id" : 2,
+          "name_en" : "Status",
+          "name_ar" : "حالة"
+        }
+      ]
     },
     {
       "id" : 3,
-      "name" : "Hats"
+      "name" : "Hats",
+      "addons" : [
+        {
+          "id" : 0,
+          "name_en" : "Color",
+          "name_ar" : "لون"
+        },
+        {
+          "id" : 2,
+          "name_en" : "Status",
+          "name_ar" : "حالة"
+        }
+      ]
     }
   ]
 }

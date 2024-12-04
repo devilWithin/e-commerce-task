@@ -1,3 +1,5 @@
+import 'package:fudex_test/features/category/presentation/cubits/get_addons_from_sub_category_cubit.dart';
+import 'package:fudex_test/features/category/presentation/cubits/select_addons_cubit.dart';
 import 'package:fudex_test/features/product/data/data_source/product_remote_data_source.dart';
 import 'package:fudex_test/features/product/data/repositories/product_repository_impl.dart';
 import 'package:fudex_test/features/product/domain/repositories/product_repository.dart';
@@ -19,6 +21,10 @@ void setupProductContainer() {
 
   sl.registerLazySingleton<GetAllProductsCubit>(
       () => GetAllProductsCubit(useCase: sl()));
+
+  sl.registerLazySingleton<SelectAddonsCubit>(() => SelectAddonsCubit());
+  sl.registerLazySingleton<GetAddonsFromSubCategoryCubit>(
+      () => GetAddonsFromSubCategoryCubit());
 
   //use cases
   sl.registerLazySingleton<AddProductUseCase>(

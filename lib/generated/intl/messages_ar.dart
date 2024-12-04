@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "productPrice": MessageLookupByLibrary.simpleMessage("سعر المنتج"),
         "productStatus": MessageLookupByLibrary.simpleMessage("حالة المنتج"),
         "productsList": MessageLookupByLibrary.simpleMessage("سجل المنتجات"),
+        "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "rsa": MessageLookupByLibrary.simpleMessage("ريال سعودي"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "secondaryCategory":

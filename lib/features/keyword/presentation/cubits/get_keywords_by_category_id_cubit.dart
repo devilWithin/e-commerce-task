@@ -11,7 +11,7 @@ class GetKeywordsByCategoryIdCubit extends Cubit<BaseState<List<Keyword>>> {
       : _useCase = useCase,
         super(const BaseState());
 
-  Future<void> getKeywordsByCategoryId(int categoryId) async {
+  Future<void> getKeywordsByCategoryId({required int categoryId}) async {
     emit(state.setInProgressState());
     final result = await _useCase(categoryId);
     result.fold(
