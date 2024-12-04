@@ -27,6 +27,11 @@ So i used clean architecture in order to maintain the project easily and to make
 ### Utils:
 - Used to handle all the utils that are used in the project like constants, colors, string
   and asset manager.
+- Base State file is a Generic class i developed to be used with Cubit or BloC events.
+- When calling APIs and using Cubit or Bloc for state management, we always write our state classes
+- to refer to the state of the screen, like loading, success, error, etc.
+- So i created this class to be used with Cubit or Bloc events to avoid writing the same boilerplate code
+  in each Cubit or Bloc event.
 
 ### Api: Used to handle all the api calls that are used in the project.
 - In the project i did not use any API calls , but there is file named Api consumer,
@@ -38,6 +43,8 @@ So i used clean architecture in order to maintain the project easily and to make
 
 ### Widgets:
 - Used to handle all the widgets that are used in the project like custom text field, custom button.
+- Also i have the mind set of creating generic classes to be used in many parts of the project like
+- custom_radio_list_tile.dart, custom_checkbox_drop_down, custom_drop_down_menu.
 
 
 ### Injection Container:
