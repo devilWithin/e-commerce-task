@@ -6,9 +6,9 @@ I used clean architecture in this project as the task is about more than one fea
 
 So i used clean architecture in order to maintain the project easily and to make it scalable and easy to test.
 
-## Folder Structure:
+# Folder Structure:
 
-### Configs folder:
+## Configs folder:
 - This folder contains all the configurations of the project routing like the theme, routing.
 
 ### Routing:
@@ -42,6 +42,13 @@ So i used clean architecture in order to maintain the project easily and to make
 
 ### Injection Container:
 - Used to handle all the dependency injection in the project using get_it
+
+## Features folder:
+- This folder contains all the features that are used in the project.
+- Each feature contains the following:
+  - Presentation: Contains all the UI of the feature.
+  - Domain: Contains all the business logic of the feature.
+  - Data: Contains all the data that are used in the feature like repositories, models, data sources.
 
 
 
